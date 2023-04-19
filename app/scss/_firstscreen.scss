@@ -1,0 +1,28 @@
+.firstscreen {
+	&__video {
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		height: 100vh;
+		object-position: bottom;
+		border-bottom-left-radius: 50px;
+		border-bottom-right-radius: 50px;
+	}
+	&__title {
+		max-width: 640px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		color: $white;
+		position: absolute;
+		right: 90px;
+		top: 400px;
+		&-text {
+			font-family: 'Lora';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 62px;
+			line-height: 110%;
+		}
+	}
+}

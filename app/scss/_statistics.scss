@@ -1,0 +1,29 @@
+.statistics {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	margin-bottom: 73px;
+	gap: 25px;
+	&__content {
+		display: flex;
+		align-items: center;
+		gap: 133px;
+		&-info {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+		&-title {
+			font-family: 'Lora';
+			font-weight: 500;
+			font-size: 100px;
+			line-height: 103%;
+			&_pink {
+				color: $pink;
+			}
+			&_orange {
+				color: $orange;
+			}
+		}
+	}
+}

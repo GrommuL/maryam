@@ -1,0 +1,108 @@
+.header {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-top: 10px;
+	&__content {
+		display: flex;
+		align-items: center;
+		gap: 93px;
+	}
+	&__block {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+	}
+	&__nav {
+		white-space: nowrap;
+		&-list {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+		&-btn {
+			padding: 11.5px 10px;
+			background: transparent;
+			font-size: 20px;
+			line-height: 27px;
+		}
+		&-item {
+			&:hover .header__nav-submenu {
+				display: flex;
+			}
+			&:hover .header__nav-link {
+				background: $white;
+				color: $mainColor;
+				border-radius: 10px;
+			}
+		}
+		&-link {
+			position: relative;
+			padding: 11.5px 10px;
+			color: $white;
+		}
+		&-submenu {
+			position: absolute;
+			bottom: -265px;
+			display: none;
+			flex-direction: column;
+			gap: 10px;
+			padding: 15px;
+			background: $white;
+			border-radius: 10px;
+			&-link {
+				font-size: 16px;
+				line-height: 22px;
+				color: $mainColor;
+			}
+		}
+	}
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		&-lng {
+			position: relative;
+			padding: 15px;
+			background: $thirdWhite;
+			border-radius: 10px;
+			transition: all 0.3s ease-in-out;
+			color: $darkGrey;
+			&:hover {
+				border-radius: 31px;
+			}
+		}
+		&-list {
+			position: absolute;
+			display: none;
+			flex-direction: column;
+			align-items: center;
+			bottom: -95px;
+			left: 0;
+			right: 0;
+			background: $white;
+			border-radius: 10px;
+			padding: 8px 12px;
+		}
+		&-item {
+			width: 39px;
+			height: 34px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:hover {
+				background: $secondWhite;
+			}
+		}
+		&-link {
+			font-size: 16px;
+			line-height: 22px;
+			color: $mainColor;
+		}
+	}
+}
+.lng_active {
+	display: flex;
+}
