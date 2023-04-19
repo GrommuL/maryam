@@ -1,0 +1,56 @@
+.partners {
+	padding-top: 95px;
+	padding-bottom: 62px;
+	&__block {
+		display: flex;
+		gap: 270px;
+	}
+	&__title {
+		max-width: 528px;
+		font-family: 'Lora';
+		font-weight: 500;
+		font-size: 48px;
+		line-height: 110%;
+		span {
+			color: $pink;
+		}
+	}
+	&__cards {
+		position: relative;
+		width: 434px;
+		height: 421px;
+		&-item {
+			width: 434px;
+			height: 421px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: $white;
+			justify-content: space-between;
+			padding: 30px;
+			box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+			border-radius: 10px;
+			&-first {
+				position: absolute;
+				inset: 0;
+				z-index: 10;
+				transform: rotate(-2.47deg);
+			}
+			&-second {
+				position: absolute;
+				inset: 0;
+				z-index: 9;
+			}
+			&-third {
+				position: absolute;
+				inset: 0;
+				z-index: 8;
+				transform: rotate(2.62deg);
+			}
+		}
+		&-text {
+			font-size: 18px;
+			line-height: 25px;
+		}
+	}
+}
