@@ -3,6 +3,7 @@
 // font-family: 'Lora', serif;
 
 body {
+	position: relative;
 	font-family: 'Nunito', sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -20,7 +21,7 @@ body {
 	padding: 0 15px;
 }
 .button {
-	padding: 11.5px 24px;
+	padding: 11px 24px;
 	border-radius: 10px;
 	color: $white;
 	transition: all 0.3s ease-in-out;
@@ -28,9 +29,11 @@ body {
 		border-radius: 46px;
 	}
 	&_pink {
+		min-width: 169px;
 		background: $pink;
 	}
 	&_olive {
+		min-width: 192px;
 		background: $olive;
 	}
 }
@@ -38,6 +41,10 @@ body {
 	position: relative;
 }
 .btn {
+	position: fixed;
+	top: 80%;
+	right: 0;
+	z-index: 2000;
 	width: 55px;
 	height: 55px;
 	display: flex;
@@ -71,6 +78,7 @@ body {
 		flex-wrap: nowrap;
 	}
 }
+
 @import './header';
 @import './firstscreen';
 @import './donation';
@@ -80,3 +88,4 @@ body {
 @import './partners';
 @import './stars';
 @import './footer';
+@import './popup';

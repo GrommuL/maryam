@@ -22,3 +22,25 @@
 		}
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.about {
+		&__content {
+			flex-direction: column;
+			gap: 80px;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.about {
+		&__content {
+			&-title {
+				font-size: 40px;
+			}
+			&-description {
+				font-size: 17px;
+			}
+		}
+	}
+}

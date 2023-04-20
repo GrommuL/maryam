@@ -22,12 +22,6 @@
 			align-items: center;
 			gap: 5px;
 		}
-		&-btn {
-			padding: 11.5px 10px;
-			background: transparent;
-			font-size: 20px;
-			line-height: 27px;
-		}
 		&-item {
 			&:hover .header__nav-submenu {
 				display: flex;
@@ -40,7 +34,7 @@
 		}
 		&-link {
 			position: relative;
-			padding: 11.5px 10px;
+			padding: 11px 10px;
 			color: $white;
 		}
 		&-submenu {
@@ -57,6 +51,15 @@
 				line-height: 22px;
 				color: $mainColor;
 			}
+			&::before{
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 30px;
+				top: -20px;
+				left: 0;
+				background: transparent;
+			}
 		}
 	}
 	&__buttons {
@@ -65,6 +68,7 @@
 		gap: 15px;
 		&-lng {
 			position: relative;
+			display: block;
 			padding: 15px;
 			background: $thirdWhite;
 			border-radius: 10px;
@@ -72,6 +76,14 @@
 			color: $darkGrey;
 			&:hover {
 				border-radius: 31px;
+				.header__buttons-list{
+					display: flex;
+				}
+			}
+			&-current{
+				font-size: 20px;
+				line-height: 27px;
+				color: $mainColor;
 			}
 		}
 		&-list {
@@ -85,6 +97,15 @@
 			background: $white;
 			border-radius: 10px;
 			padding: 8px 12px;
+			&::before{
+				content: '';
+				position: absolute;
+				top: -20px;
+				left: 0;
+				width: 60px;
+				height: 25px;
+				background: transparent;
+			}
 		}
 		&-item {
 			width: 39px;
@@ -105,4 +126,156 @@
 }
 .lng_active {
 	display: flex;
+}
+.header{
+	&__burger{
+        position: relative;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        border: 3px solid transparent;
+		&-btn{
+			width: 30px;
+			height: 2px;
+			background: $white;
+			border-radius: 5px;
+			transition: all .5s ease-in-out;
+			&::before,
+			&::after{
+				content: '';
+				position: absolute;
+				width: 30px;
+				height: 2px;
+				background: $white;
+				border-radius: 5px;
+				transition: all .5s ease-in-out;
+			}
+			&::before{
+				transform: translateY(-8px);
+			}
+			&::after{
+				transform: translateY(8px);
+			}
+	}
+    }
+}
+.header__burger.open .header__burger-btn{
+    transform: translateX(-15px);
+    background: transparent;
+}
+.header__burger.open .header__burger-btn::before{
+    transform: rotate(45deg) translate(10px, -9px);
+}
+.header__burger.open .header__burger-btn::after{
+    transform: rotate(-45deg) translate(9px, 10px);
+}
+
+@media screen and (max-width: 1450px) {
+	.header{
+		&__content {
+			justify-content: space-between;
+		}
+		&__buttons {
+			&-lng {
+				padding: 8px;
+				&-current{
+					font-size: 15px;
+					line-height: 90%;
+				}
+			}
+		}
+		&__nav {
+			&-list {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+			}
+			&-link {
+				font-size: 20px;
+				line-height: 27px;
+			}
+	}
+	.button {
+		font-size: 17px;
+		line-height: 23px;
+		padding: 6px 12px;
+		border-radius: 10px;
+		color: $white;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			border-radius: 46px;
+		}
+		&_pink {
+			min-width: 91px;
+			background: $pink;
+		}
+		&_olive {
+			min-width: 99px;
+			background: $olive;
+		}
+	}
+
+}
+}
+@media screen and (max-width: 1250px) {
+	.header{
+		&__content{
+			gap: 20px;
+		}
+		&__buttons {
+			&-lng {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 32px;
+				padding: 5px;
+				&-current{
+					font-size: 13px;
+					line-height: 90%;
+				}
+			}
+		}
+		&__nav {
+			&-list {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+			}
+			&-link {
+				font-size: 15px;
+				line-height: 23px;
+			}
+	}
+	.button {
+		font-size: 13px;
+		line-height: 18px;
+		padding: 6px 12px;
+		&_pink {
+			min-width: 81px;
+			background: $pink;
+		}
+		&_olive {
+			min-width: 89px;
+			background: $olive;
+		}
+	}
+
+}
+}
+@media screen and  (max-width: 992px) {
+	.header__buttons{
+		display: none;
+	}
+	.header__burger{
+		display: flex;
+	}
+}
+@media screen and  (max-width: 992px) {
+	.header__nav-list{
+		display: none;
+	}
 }

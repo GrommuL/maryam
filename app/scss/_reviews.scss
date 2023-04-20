@@ -9,7 +9,7 @@
 	&__info {
 		display: flex;
 		gap: 349px;
-		&-title {
+		&-text {
 			display: flex;
 			flex-direction: column;
 			gap: 16px;
@@ -126,8 +126,94 @@
 			width: 80px;
 			height: 80px;
 			position: absolute;
-			top: 80px;
+			top: 180px;
 			right: 100px;
+		}
+	}
+}
+@media screen and (max-width: 1250px) {
+	.reviews{
+		&__info{
+			gap: 0;
+			justify-content: space-between;
+			&-description{
+				max-width: 440px;
+			}
+		}
+		&__tabs{
+			&-box{
+				gap: 83px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 992px) {
+	.reviews{
+		&__info{
+			&-button{
+				width: 250px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.reviews{
+		&__info{
+			&-title{
+				font-size: 38px;
+			}
+			&-description{
+				max-width: 280px;
+				font-size: 14px;
+			}
+			&-button{
+				width: 200px;
+				font-size: 16px;
+			}
+		}
+		&__content{
+			&-item{
+				gap: 45px;
+			}
+			&-text{
+				font-size: 13px;
+			}
+			&-name{
+				font-size: 16px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 576px) {
+	.reviews{
+		&__info{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 30px;
+			&-title{
+				text-align: center;
+				font-size: 38px;
+			}
+			&-description{
+				text-align: center;
+				max-width: 330px;
+				font-size: 14px;
+			}
+			&-button{
+				width: 170px;
+				font-size: 12px;
+			}
+		}
+		&__content{
+			&-item{
+				flex-direction: column;
+			}
+			&-quotes{
+				top: 400px;
+			}
 		}
 	}
 }

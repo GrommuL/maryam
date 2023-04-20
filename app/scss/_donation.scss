@@ -101,3 +101,327 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1450px) {
+	.donation {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translateY(-120px);
+		&__block {
+			width: 1201px;
+		}
+		&__form {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			&-label {
+				padding: 10px 20px;
+				font-size: 15px;
+			}
+			&-customdonate {
+				padding: 10px 20px;
+				font-size: 15px;
+				line-height: 22px;
+			}
+		}
+		&__payment {
+			&-title {
+				color: $grey;
+				font-size: 18px;
+			}
+			&-other {
+				color: $pink;
+				font-size: 18px;
+			}
+			&-offer {
+				color: $grey;
+				font-size: 18px;
+				&-link {
+					color: $pink;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.donation {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translateY(-120px);
+		&__block {
+			width: 1000px;
+		}
+		&__form {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			&-label {
+				padding: 7px 15px;
+				font-size: 15px;
+			}
+			&-customdonate {
+				padding: 10px 20px;
+				font-size: 15px;
+				line-height: 22px;
+			}
+			&-btn {
+				display: flex;
+				align-items: center;
+				gap: 4px;
+				padding: 10px 50px;
+				font-size: 11px;
+				&-icon {
+					width: 13px;
+					height: 11px;
+				}
+			}
+		}
+		&__payment {
+			gap: 60px;
+			&-info{
+				gap: 80px;
+			}
+			&-title {
+				color: $grey;
+				font-size: 14px;
+			}
+			&-other {
+				color: $pink;
+				font-size: 14px;
+			}
+			&-offer {
+				color: $grey;
+				font-size: 14px;
+				&-link {
+					color: $pink;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1100px) {
+	.donation {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translateY(-120px);
+		&__block {
+			width: 900px;
+		}
+		&__form {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 50px;
+			&-label {
+				padding: 7px 15px;
+				font-size: 12px;
+			}
+			&-customdonate {
+				padding: 10px 20px;
+				font-size: 13px;
+				line-height: 20px;
+			}
+			&-btn {
+				display: flex;
+				align-items: center;
+				gap: 4px;
+				padding: 10px 30px;
+				font-size: 11px;
+				&-icon {
+					width: 13px;
+					height: 11px;
+				}
+			}
+		}
+		&__payment {
+			gap: 60px;
+			&-info{
+				gap: 60px;
+			}
+			&-title {
+				color: $grey;
+				font-size: 12px;
+			}
+			&-other {
+				color: $pink;
+				font-size: 12px;
+			}
+			&-offer {
+				color: $grey;
+				font-size: 12px;
+				&-link {
+					color: $pink;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 940px) {
+	.donation {
+		&__block {
+			width: 700px;
+			padding: 20px;
+		}
+		&__form {
+			display: flex;
+			gap: 10px;
+			&-block{
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 10px;
+			}
+		}
+		&__payment {
+			gap: 40px;
+			&-info{
+				gap: 60px;
+			}
+			&-list{
+				gap: 20px;
+			}
+			&-img{
+				width: 55px;
+			}
+			&-title {
+				color: $grey;
+				font-size: 12px;
+				line-height: 18px;
+			}
+			&-other {
+				color: $pink;
+				font-size: 12px;
+				line-height: 18px;
+			}
+			&-offer {
+				max-width: 120px;
+				color: $grey;
+				font-size: 12px;
+				line-height: 18px;
+				&-link {
+					color: $pink;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.donation {
+		&__block {
+			width: 480px;
+		}
+		&__form {
+			&-block{
+				gap: 4px;
+			}
+			&-customdonate {
+				padding: 8px 10px;
+				font-size: 10px;
+				line-height: 15px;
+			}
+		}
+		&__payment {
+			gap: 20px;
+			&__block{
+				padding: 3px;
+			}
+			&-info{
+				gap: 20px;
+			}
+			&-list{
+				gap: 5px;
+			}
+			&-img{
+				width: 35px;
+			}
+			&-title {
+				color: $grey;
+				font-size: 10px;
+				line-height: 16px;
+			}
+			&-other {
+				color: $pink;
+				font-size: 10px;
+				line-height: 16px;
+			}
+			&-offer {
+				font-size: 10px;
+				line-height: 16px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.donation {
+		&__block {
+			width: 400px;
+			height: 250px;
+		}
+		&__form {
+			flex-direction: column;
+			&-block{
+				max-width: 300px;
+				gap: 2px;
+			}
+			&-btn{
+				padding: 8px 15px;
+				font-size: 11px;
+				&-icon{
+					display: none;
+				}
+			}
+		}
+		&__payment {
+			gap: 20px;
+			flex-direction: column;
+			&__block{
+				padding: 3px;
+			}
+			&-info{
+				gap: 20px;
+			}
+			&-list{
+				gap: 5px;
+			}
+			&-img{
+				width: 55px;
+			}
+			&-title {
+				color: $grey;
+				font-size: 10px;
+				line-height: 16px;
+			}
+			&-other {
+				color: $pink;
+				font-size: 10px;
+				line-height: 16px;
+			}
+			&-offer {
+				max-width: 200px;
+				font-size: 10px;
+				line-height: 16px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.donation {
+		&__block {
+			width: 300px;
+			height: 290px;
+		}
+		&__payment {
+			&-info{
+			flex-direction: column;
+			}
+		}
+	}
+}

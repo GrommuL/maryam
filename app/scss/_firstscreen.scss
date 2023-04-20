@@ -1,6 +1,6 @@
 .firstscreen {
 	&__video {
-		display: block;
+		display: inline-block;
 		object-fit: cover;
 		width: 100%;
 		height: 100vh;
@@ -15,7 +15,7 @@
 		gap: 30px;
 		color: $white;
 		position: absolute;
-		right: 90px;
+		right: 13%;
 		top: 400px;
 		&-text {
 			font-family: 'Lora';
@@ -24,5 +24,82 @@
 			font-size: 62px;
 			line-height: 110%;
 		}
+	}
+}
+@media screen and (max-width: 1650px) {
+	.firstscreen {
+		&__title {
+			right: 1%;
+			&-text {
+				font-size: 52px;
+				line-height: 110%;
+			}
+			&-description{
+				font-size: 17px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1450px) {
+	.firstscreen {
+		&__title {
+			right: 1%;
+			&-text {
+				max-width: 500px;
+				font-size: 47px;
+				line-height: 110%;
+			}
+			&-description{
+				font-size: 15px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1250px) {
+	.firstscreen {
+		&__title {
+			right: -20%;
+			transform: translateX(-50%);
+			&-text {
+				font-size: 47px;
+				line-height: 110%;
+			}
+		}
+
+	}
+}
+@media screen and (max-width: 768px) {
+	.firstscreen {
+		&__title {
+			left: 50%;
+			transform: translateX(-50%);
+			&-text {
+				max-width: 300px;
+				font-size: 32px;
+				line-height: 110%;
+			}
+			&-description{
+				font-size: 12px;
+			}
+		}
+
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.firstscreen {
+		&__title {
+			left: 50%;
+			transform: translateX(-50%);
+			&-text {
+				max-width: 300px;
+				font-size: 28px;
+				line-height: 110%;
+			}
+			&-description{
+				font-size: 10px;
+			}
+		}
+
 	}
 }

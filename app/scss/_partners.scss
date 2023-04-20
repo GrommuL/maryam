@@ -30,6 +30,7 @@
 			padding: 30px;
 			box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
 			border-radius: 10px;
+			cursor: pointer;
 			&-first {
 				position: absolute;
 				inset: 0;
@@ -52,5 +53,75 @@
 			font-size: 18px;
 			line-height: 25px;
 		}
+	}
+}
+
+@keyframes slide {
+	0%{
+
+		transform: rotate(-2.47deg);
+	}
+	50%{
+
+		transform: rotate(0deg);
+	}
+	100%{
+
+		z-index: 8;
+		transform: rotate(2.47deg);
+	}
+}
+// animation: slide .6s linear;
+
+
+@media screen and (max-width: 1450px) {
+	.partners{
+		&__block{
+			gap: 170px;
+		}
+	}
+}
+@media screen and (max-width: 1250px) {
+	.partners{
+		&__block{
+			gap: 0;
+			justify-content: space-between;
+		}
+		&__title{
+			font-size: 38px;
+			max-width: 328px;
+		}
+	}
+}
+@media screen and (max-width: 992px) {
+	.partners{
+		&__block{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 60px;
+		}
+		&__title{
+			font-size: 38px;
+			max-width: 328px;
+		}
+	}
+}
+@media screen and (max-width: 576px) {
+	.partners{
+		&__cards{
+			width: 334px;
+			height: 321px;
+			&-item{
+				width: 334px;
+				height: 321px;
+			}
+			&-text {
+				font-size: 16px;
+				line-height: 18px;
+			}
+		}
+
 	}
 }
