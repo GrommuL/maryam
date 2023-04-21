@@ -232,7 +232,7 @@
 				align-items: center;
 				gap: 4px;
 				padding: 10px 30px;
-				font-size: 11px;
+				font-size: 12px;
 				&-icon {
 					width: 13px;
 					height: 11px;
@@ -315,6 +315,7 @@
 	.donation {
 		&__block {
 			width: 480px;
+			height: 250px;
 		}
 		&__form {
 			&-block{
@@ -322,37 +323,40 @@
 			}
 			&-customdonate {
 				padding: 8px 10px;
-				font-size: 10px;
+				font-size: 13px;
 				line-height: 15px;
 			}
 		}
 		&__payment {
+			flex-direction: column;
 			gap: 20px;
 			&__block{
 				padding: 3px;
 			}
 			&-info{
+				flex-direction: column;
 				gap: 20px;
 			}
 			&-list{
 				gap: 5px;
 			}
 			&-img{
-				width: 35px;
+				width: 55px;
 			}
 			&-title {
 				color: $grey;
-				font-size: 10px;
+				font-size: 14px;
 				line-height: 16px;
 			}
 			&-other {
 				color: $pink;
-				font-size: 10px;
+				font-size: 14px;
 				line-height: 16px;
 			}
 			&-offer {
-				font-size: 10px;
+				font-size: 14px;
 				line-height: 16px;
+				max-width: 300px;
 			}
 		}
 	}
@@ -362,7 +366,7 @@
 	.donation {
 		&__block {
 			width: 400px;
-			height: 250px;
+			height: 280px;
 		}
 		&__form {
 			flex-direction: column;
@@ -372,7 +376,7 @@
 			}
 			&-btn{
 				padding: 8px 15px;
-				font-size: 11px;
+				font-size: 14px;
 				&-icon{
 					display: none;
 				}
@@ -386,6 +390,7 @@
 			}
 			&-info{
 				gap: 20px;
+				flex-direction: column;
 			}
 			&-list{
 				gap: 5px;
@@ -395,17 +400,17 @@
 			}
 			&-title {
 				color: $grey;
-				font-size: 10px;
+				font-size: 14px;
 				line-height: 16px;
 			}
 			&-other {
 				color: $pink;
-				font-size: 10px;
+				font-size: 14px;
 				line-height: 16px;
 			}
 			&-offer {
-				max-width: 200px;
-				font-size: 10px;
+				max-width: 250px;
+				font-size: 14px;
 				line-height: 16px;
 			}
 		}

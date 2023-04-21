@@ -133,6 +133,7 @@
 }
 @media screen and (max-width: 1250px) {
 	.reviews{
+		padding-top: 50px;
 		&__info{
 			gap: 0;
 			justify-content: space-between;
@@ -165,7 +166,8 @@
 			}
 			&-description{
 				max-width: 280px;
-				font-size: 14px;
+				font-size: 15px;
+				line-height: 20px;
 			}
 			&-button{
 				width: 200px;
@@ -177,7 +179,8 @@
 				gap: 45px;
 			}
 			&-text{
-				font-size: 13px;
+				font-size: 14px;
+				line-height: 20px;
 			}
 			&-name{
 				font-size: 16px;
@@ -204,7 +207,7 @@
 			}
 			&-button{
 				width: 170px;
-				font-size: 12px;
+				font-size: 13px;
 			}
 		}
 		&__content{

@@ -3,6 +3,11 @@ const reviewContents = document.querySelectorAll('.reviews__content-item')
 const mapBtns = document.querySelectorAll('.statistics__review-item')
 const commentBlocks = document.querySelectorAll('.statistics__review-comment')
 const burger = document.querySelector('.header__burger')
+const sideMenu = document.querySelector('.overlay')
+const popup = document.querySelector('.popup')
+const sideMenuLink = document.querySelectorAll('.popup__nav-title')
+const sideMenuLinkDropdown = document.querySelectorAll('.popup__nav-list')
+const closeBtn = document.querySelector('.popup__closebtn')
 const firstCard = document.querySelector('.partners__cards-item-first')
 const secondCard = document.querySelector('.partners__cards-item-second')
 const thirdCard = document.querySelector('.partners__cards-item-third')
@@ -27,10 +32,38 @@ thirdCard.addEventListener('click', ()=>{
 })
 burger.addEventListener('click',()=>{
 	burger.classList.toggle('open')
+	sideMenu.style.display = 'block'
+})
+closeBtn.addEventListener('click', ()=> {
+	sideMenu.style.display = 'none'
+	burger.classList.remove('open')
+})
+document.querySelectorAll('.popup__nav-link').forEach((link)=>{
+	link.addEventListener('click',()=>{
+		sideMenu.style.display = 'none'
+		burger.classList.remove('open')
+		sideMenuLinkDropdown.forEach((item)=>{
+			item.style.display = 'none'
+		})
+	})
+})
+
+sideMenuLink.forEach((btn,idx)=> {
+	btn.addEventListener('click', ()=>{
+		sideMenuLink.forEach((el)=> {
+			el.classList.remove('popup__nav-title-active')
+			btn.classList.add('popup__nav-title-active')
+
+			sideMenuLinkDropdown.forEach((item)=>{
+				item.style.display = 'none'
+			})
+			sideMenuLinkDropdown[idx].style.display = 'flex'
+		})
+	})
 })
 
 reviewBtns.forEach((btn, idx) => {
-	btn.addEventListener('click', (e) => {
+	btn.addEventListener('click', () => {
 		reviewBtns.forEach((item) => {
 			item.classList.remove('reviews__tabs-active')
 			btn.classList.add('reviews__tabs-active')
@@ -48,7 +81,7 @@ mapBtns.forEach((btn,idx)=>{
 	})
 })
 const swiper = new Swiper('.mySwiper', {
-	slidesPerView: 3,
+	slidesPerView: 1,
 	pagination: {
 		el: '.swiper-pagination',
 		clickable: true

@@ -62,7 +62,7 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 14px 70.5px;
+		padding: 14px 70px;
 		.btn-label {
 			display: flex;
 		}
@@ -75,10 +75,39 @@ body {
 		display: none;
 		color: $white;
 		min-width: 220px;
-		flex-wrap: nowrap;
+		// flex-wrap: nowrap;
 	}
 }
+@media screen and (max-width: 1250px) {
+	.btn{
+		font-size: 16px;
+		&:hover{
+			width: 391px;
+			padding: 12px 10px;
+		}
+		&-label{
+			transform: translateX(20px);
+		}
+	}
 
+}
+@media screen and (max-width: 768px) {
+	.btn{
+		font-size: 14px;
+		&:hover{
+			width: 251px;
+			padding: 12px 10px;
+			gap: 0;
+			.btn-icon{
+				transform: translateX(20px);
+			}
+		}
+		&-label{
+			transform: translateX(30px);
+		}
+	}
+
+}
 @import './header';
 @import './firstscreen';
 @import './donation';

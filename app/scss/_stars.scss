@@ -5,6 +5,7 @@
 	flex-direction: column;
 	gap: 130px;
 	padding-top: 100px;
+	padding-bottom: 100px;
 	background: $secondWhite;
 	&__info {
 		display: flex;
@@ -37,6 +38,7 @@
 	&-wrapper {
 		display: flex;
 		align-items: center;
+		gap: 20px;
 	}
 	&__info {
 		display: flex;
@@ -57,9 +59,13 @@
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	width: 378px;
+	max-width: 378px;
 	height: 567px;
 	cursor: pointer;
+	&-active,
+	&-next{
+		max-width: 378px;
+	}
 	&:hover {
 		.swiper-slide-card {
 			transition: all .3s ease-in-out;
@@ -69,6 +75,7 @@
 
 	&-container {
 		position: relative;
+		max-width: 378px;
 	}
 	&-card {
 		position: absolute;
@@ -90,41 +97,75 @@
 }
 
 
-@media screen and (max-width: 1180px) {
-	.swiper{
-		&-wrapper{
-			gap: 60px;
+@media screen and (max-width: 1450px) {
+	.stars{
+		&__info{
+			gap: 0;
+			justify-content: space-between;
 		}
 	}
 }
 
-// @media screen and (max-width: 992px) {
-// 	.swiper{
-// 		&-wrapper{
-// 			gap: 120px;
-// 		}
-// 	}
-// }
 
-// @media screen and (max-width: 810px) {
-// 	.swiper{
-// 		&-wrapper{
-// 			gap: 180px;
-// 		}
-// 	}
-// }
+@media screen and (max-width: 992px) {
+	.stars{
+		&__info{
+			&-text{
+				font-size: 18px;
+				line-height: 24px;
+				max-width: 460px;
+			}
+		}
+	}
+}
 
-// @media screen and (max-width: 640px) {
-// 	.swiper{
-// 		&-wrapper{
-// 			gap: 220px;
-// 		}
-// 	}
-// }
-// @media screen and (max-width: 810px) {
-// 	.swiper{
-// 		&-wrapper{
-// 			gap: 260px;
-// 		}
-// 	}
-// }
+@media screen and (max-width: 768px) {
+	.stars{
+		padding-top: 70px;
+		padding-bottom: 70px;
+		&__info{
+			flex-direction: column;
+			align-items: center;
+			gap: 40px;
+			&-title{
+				text-align: center;
+			}
+			&-text{
+				font-size: 19px;
+				line-height: 25px;
+				max-width: 640px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.stars{
+		padding-top: 50px;
+		padding-bottom: 50px;
+		&__info{
+			gap: 30px;
+			&-text{
+				font-size: 18px;
+				line-height: 23px;
+				max-width: 440px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 513px) {
+	.stars{
+		&__info{
+			&-title{
+				width: 320px;
+				max-width: 320px;
+			}
+			&-text{
+				font-size: 15px;
+				line-height: 22px;
+				max-width: 320px;
+			}
+		}
+	}
+}
