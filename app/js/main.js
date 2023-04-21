@@ -48,6 +48,13 @@ document.querySelectorAll('.popup__nav-link').forEach((link)=>{
 	})
 })
 
+document.addEventListener('click', (e)=> {
+	if(!burger.contains(e.target) && !popup.contains(e.target)){
+		sideMenu.style.display = 'none'
+		burger.classList.remove('open')
+	}
+})
+
 sideMenuLink.forEach((btn,idx)=> {
 	btn.addEventListener('click', ()=>{
 		sideMenuLink.forEach((el)=> {
