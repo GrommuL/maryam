@@ -26,12 +26,14 @@
 			font-weight: 500;
 			font-size: 50px;
 			line-height: 110%;
+			padding-left: 15px;
 			color: $white;
 		}
 	}
 	&__breadcrumbs {
 		display: flex;
 		align-items: center;
+		padding-left: 15px;
 		gap: 5px;
 		&-delimiter {
 			color: $white;
@@ -45,6 +47,7 @@
 	&__buttons {
 		display: flex;
 		align-items: center;
+		padding-left: 15px;
 		gap: 7px;
 		&-link {
 			font-weight: 400;
@@ -105,7 +108,18 @@
 	}
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 768px) {
+	.navigation {
+		&__breadcrumbs {
+			&-link {
+				font-size: 13px;
+				line-height: 18px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 640px) {
 	.navigation {
 		&_news {
 			padding-top: 250px;
@@ -113,14 +127,26 @@
 		height: 400px;
 		&__info {
 			&-title {
-				font-size: 35px;
+				font-size: 30px;
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 460px) {
 	.navigation {
+		&__breadcrumbs {
+			&-link {
+				max-width: 150px;
+				font-size: 11px;
+				line-height: 13px;
+			}
+		}
+		&__info {
+			&-title {
+				font-size: 20px;
+			}
+		}
 		&__buttons {
 			&-link {
 				font-size: 12px;
