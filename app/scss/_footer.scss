@@ -1,168 +1,168 @@
-.footer{
-    border-radius: 30px 30px 0px 0px;
-    padding: 50px 0;
-    &__inner{
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-    }
-    &__top{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        &-social{
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        &-link{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        &-twitter{
-            width: 28px;
-            height: 28px;
-        }
-        &-btn{
-            width: 288px;
-            height: 56px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px 25px;
-            border-radius: 10px;
-            background: $olive;
-            color: $mainColor;
-            transition: all .3s ease-in-out;
-            &:hover{
-                border-radius: 40px;
-            }
-        }
-    }
-    &__about{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        &-info{
-            max-width: 420px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            font-size: 20px;
-            line-height: 24px;
-            a{
-                color: $mainColor;
-                transition: all .3s ease-in-out;
-                &:hover{
-                    color: $pink;
-                }
-            }
-        }
-        &-title{
-            opacity: 0.7;
-        }
-    }
-    &__bottom{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        &-right{
-            color: $mainColor;
-            span{
-                color: $pink;
-            }
-        }
-    }
+.footer {
+	border-radius: 30px 30px 0px 0px;
+	padding: 0 0 50px;
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+	}
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&-social {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+		}
+		&-link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&-twitter {
+			width: 28px;
+			height: 28px;
+		}
+		&-btn {
+			width: 288px;
+			height: 56px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 15px 25px;
+			border-radius: 10px;
+			background: $olive;
+			color: $mainColor;
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				border-radius: 40px;
+			}
+		}
+	}
+	&__about {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&-info {
+			max-width: 420px;
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			font-size: 20px;
+			line-height: 24px;
+			a {
+				color: $mainColor;
+				transition: all 0.3s ease-in-out;
+				&:hover {
+					color: $pink;
+				}
+			}
+		}
+		&-title {
+			opacity: 0.7;
+		}
+	}
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&-right {
+			color: $mainColor;
+			span {
+				color: $pink;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 992px) {
-	.footer{
-        &__top{
-            &-btn{
-                width: 208px;
-            }
-            &-logo img{
-                width: 300px;
-            }
-        }
-		&__about{
-			&-info{
-                font-size: 16px;
-                line-height: 20px;
-            }
+	.footer {
+		&__top {
+			&-btn {
+				width: 208px;
+			}
+			&-logo img {
+				width: 300px;
+			}
 		}
-        &__bottom{
-            &-left,
-            &-right{
-                font-size: 16px;
-            }
-        }
+		&__about {
+			&-info {
+				font-size: 16px;
+				line-height: 20px;
+			}
+		}
+		&__bottom {
+			&-left,
+			&-right {
+				font-size: 16px;
+			}
+		}
 	}
 }
 
 @media screen and (max-width: 768px) {
-	.footer{
-        &__top{
-            &-btn{
-                width: 178px;
-                font-size: 14px;
-            }
-            &-logo img{
-                width: 250px;
-            }
-        }
-		&__about{
-			&-info{
-                max-width: 170px;
-                font-size: 14px;
-                line-height: 18px;
-            }
+	.footer {
+		&__top {
+			&-btn {
+				width: 178px;
+				font-size: 14px;
+			}
+			&-logo img {
+				width: 250px;
+			}
 		}
-        &__bottom{
-            &-left,
-            &-right{
-                max-width: 200px;
-                font-size: 14px;
-                line-height: 18px;
-            }
-        }
+		&__about {
+			&-info {
+				max-width: 170px;
+				font-size: 14px;
+				line-height: 18px;
+			}
+		}
+		&__bottom {
+			&-left,
+			&-right {
+				max-width: 200px;
+				font-size: 14px;
+				line-height: 18px;
+			}
+		}
 	}
 }
 
 @media screen and (max-width: 567px) {
-	.footer{
-        &__top{
-            flex-direction: column;
-            gap: 30px;
-            &-btn{
-                width: 208px;
-                font-size: 14px;
-            }
-            &-logo img{
-                width: 300px;
-            }
-        }
-		&__about{
-            flex-direction: column;
-            text-align: center;
-            gap: 30px;
-			&-info{
-                max-width: 300px;
-                font-size: 14px;
-                line-height: 18px;
-            }
+	.footer {
+		&__top {
+			flex-direction: column;
+			gap: 30px;
+			&-btn {
+				width: 208px;
+				font-size: 14px;
+			}
+			&-logo img {
+				width: 300px;
+			}
 		}
-        &__bottom{
-            flex-direction: column-reverse;
-            gap: 30px;
-            text-align: center;
-            &-left,
-            &-right{
-                max-width: 200px;
-                font-size: 14px;
-                line-height: 18px;
-            }
-        }
+		&__about {
+			flex-direction: column;
+			text-align: center;
+			gap: 30px;
+			&-info {
+				max-width: 300px;
+				font-size: 14px;
+				line-height: 18px;
+			}
+		}
+		&__bottom {
+			flex-direction: column-reverse;
+			gap: 30px;
+			text-align: center;
+			&-left,
+			&-right {
+				max-width: 200px;
+				font-size: 14px;
+				line-height: 18px;
+			}
+		}
 	}
 }
