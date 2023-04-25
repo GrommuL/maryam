@@ -231,7 +231,7 @@
 				align-items: center;
 				justify-content: center;
 				height: 32px;
-				padding: 5px;
+				padding: 5px 0;
 				&-current {
 					font-size: 13px;
 					line-height: 90%;
@@ -249,7 +249,7 @@
 				line-height: 23px;
 			}
 		}
-		.button {
+		&__button {
 			font-size: 13px;
 			line-height: 18px;
 			padding: 6px 12px;
